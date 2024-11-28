@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2.4rem;
+  font-family: "Quicksand", sans-serif;
+  color: #E0E0E0; /* Light Grey for text */
+  font-weight: 500;
+  background: #1B1B2F; /* Dark Navy Blue */
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  background-color: #1B1B2F; /* Primary Background */
+  border-radius: 0;
+}
+
+h1 {
+  text-align: center;
+  background-color: #162447; /* Dark Blue */
+  font-family: "Monoton";
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  word-spacing: 30px;
+  letter-spacing: -5px;
+  padding: 2.4rem 0;
+  color: #E94560; /* Light Grey for text */
+  border-bottom: 3px solid #E94560; /* Darker Blue Border */
+}
+
+.add-form {
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #162447; /* Dark Blue */
+}
+
+h3 {
+  margin-right: 1.6rem;
+  font-size: 2.4rem;
+  color: #E0E0E0; /* Light Grey for text */
+}
+
+/* Input, Dropdown, and Button Styling */
+button,
+select,
+input {
+  background-color: #0F3460; /* Darker Blue */
+  color: #E0E0E0; /* Light Grey text */
+  font-family: inherit;
+  border: none;
+  padding: 1.2rem 3.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border-radius: 10rem;
+  box-shadow: 0px 2px 5px rgba(15, 52, 96, 0.3);
+}
+
+button:hover,
+select:hover,
+input:hover {
+  transform: scale(1.05);
+  background-color: #1F4068; /* Slightly lighter Blue */
+  color: #FFFFFF; /* White text for hover */
+}
+
+.add-form button {
+  text-transform: uppercase;
+  background-color: #1F4068; /* Slightly lighter Blue */
+  color: #FFFFFF; /* White text */
+  border-radius: 10rem;
+  font-weight: 700;
+  box-shadow: 0px 4px 8px rgba(31, 64, 104, 0.4);
+}
+
+.list {
+  color: #E0E0E0; /* Light Grey for the list */
+  padding: 4rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: center;
+  background-color: #1B1B2F; /* Matches main background */
+}
+
+.list ul {
+  list-style: none;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  justify-content: center;
+  align-content: start;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem;
+  background: #0F3460; /* Darker Blue for list items */
+  border: 2px solid #1F4068; /* Slightly lighter Blue border */
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(15, 52, 96, 0.3);
+}
+
+input[type="checkbox"] {
+  height: 2rem;
+  width: 2rem;
+  accent-color: #E94560; /* Bright Red for checkbox */
+  cursor: pointer;
+}
+
+/* Checkbox styling for packed items */
+.packed {
+  text-decoration: line-through; /* Cross out the text */
+  color: #A8A8B3 !important; /* Muted Grey for packed items */
+}
+
+.list li span {
+  color: #E0E0E0; /* Default Light Grey text */
+}
+
+.stats {
+  background-color: #162447; /* Dark Blue */
+  text-align: center;
+  font-weight: 700;
+  padding: 3.2rem 0;
+  color: #E0E0E0; /* Light Grey for text */
+  border-top: 3px solid #E94560; /* Darker Blue Border */
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: 0.4rem 0.8rem;
+  color: #E94560; /* Bright Red for delete button */
+  font-weight: bold;
+  box-shadow: none;
+}
+
+.form-and-sort {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #162447; /* Dark Blue */
+  border-bottom: 3px solid #E94560; /* Darker Blue Border */
+}
+
+.sort-dropdown,
+.category-dropdown {
+  background-color: #0F3460; /* Darker Blue dropdown */
+  color: #E0E0E0; /* Light Grey text */
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.8rem;
+  border: none;
+  padding: 1.2rem 3rem;
+  cursor: pointer;
+  border-radius: 10rem;
+  box-shadow: 0px 2px 5px rgba(15, 52, 96, 0.3);
+}
+
+.sort-dropdown:hover,
+.category-dropdown:hover {
+  background-color: #1F4068; /* Slightly lighter Blue */
+  color: #FFFFFF; /* White text on hover */
+}
+
+.progress-container {
+  width: 80%;
+  height: 2rem;
+  margin: 1rem auto;
+  background-color: #0F3460; /* Darker Blue for progress bar background */
+  border-radius: 10rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #E94560; /* Bright Red for progress bar */
+  transition: width 0.3s ease-in-out;
+  border-radius: 10rem;
+  box-shadow: 0px 4px 10px rgba(233, 69, 96, 0.3);
+}
+
+/* Quantity Input Styling */
+.quantity-input {
+  width: 8rem;
+  text-align: center;
+  border: 2px solid #1F4068; /* Slightly lighter Blue border */
+  border-radius: 10rem;
+  font-size: 1.6rem;
+  color: #E0E0E0; /* Light Grey text */
+  margin: 0 0.8rem;
+  padding: 0.6rem;
+  box-shadow: 0px 2px 5px rgba(15, 52, 96, 0.3);
+}
+
+.quantity-input:focus {
+  outline: none;
+  border: 2px solid #E94560; /* Bright Red on focus */
+  box-shadow: 0 0 5px #E94560; /* Subtle glow effect */
+}
+
+.quantity-input.packed {
+  background-color: #A8A8B3; /* Greyed out when packed */
+  color: #FFFFFF; /* White text */
+  cursor: not-allowed;
+}
+
